@@ -27,6 +27,21 @@ GhostChat is built on a **Double-Layer Encryption** strategy:
 
 ---
 
+## 📖 How to Use
+
+GhostChat is designed for simplicity and maximum privacy. No registration is required.
+
+1.  **Set Your Identity:** Enter an optional **Nickname** to identify yourself in the chat. If left blank, you will appear as "Anonim".
+2.  **Create a Room:** Click on **"Create Secure Room"**. A unique, encrypted Room ID will be generated for you.
+3.  **Invite Friends:** Copy the generated Room ID and share it with your peer.
+4.  **Join a Room:** If you have an ID from a friend, paste it into the **"Enter Room ID"** field and click **"Join Room"**.
+5.  **Chat Privately:** Once the secure channel is established (Keys are exchanged), you can send encrypted text and **Emojis** 😀 safely.
+
+> [!TIP]
+> Your Room ID also contains a hidden encryption key suffix. Sharing the full ID ensures your friend can derive the same room password for the second layer of encryption.
+
+---
+
 ## 🚀 Installation and Setup
 
 ### Local Development Environment
