@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GhostChat - Secure E2EE Messaging</title>
+    <link rel="stylesheet" href="/css/main.css?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono&family=Noto+Color+Emoji&display=swap" rel="stylesheet">
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+</head>
+<body>
+    <div id="app-container">
+        <!-- Setup Screen -->
+        <div id="setup-screen" class="screen active">
+            <div class="logo-container">
+                <div class="ghost-icon">👻</div>
+                <h1>GhostChat</h1>
+                <p>E2EE • Log-less • Stateless</p>
+            </div>
+            <div class="setup-actions">
+                <input type="text" id="input-nickname" placeholder="Takma adınız (Opsiyonel)" autocomplete="off" style="margin-bottom: 0.5rem; text-align: center;">
+                <button id="btn-create-room" class="btn primary">Create Secure Room</button>
+                <div class="divider"><span>OR</span></div>
+                <div class="join-container">
+                    <input type="text" id="input-room-id" placeholder="Enter Room ID" autocomplete="off">
+                    <button id="btn-join-room" class="btn secondary">Join Room</button>
+                </div>
+            </div>
+            <div id="setup-error" class="error-msg hidden"></div>
+        </div>
+
+        <!-- Chat Screen -->
+        <div id="chat-screen" class="screen hidden">
+            <header class="chat-header">
+                <div class="room-info">
+                    <h2>Room: <span id="current-room-id" class="mono">...</span></h2>
+                    <div class="status-indicator">
+                        <span id="connection-status" class="dot disconnected"></span>
+                        <span id="connection-text">Waiting for peer...</span>
+                        <span id="participant-count" class="badge hidden">1 Online</span>
+                    </div>
+                </div>
+                <button id="btn-leave-room" class="btn icon-btn">🚪 Leave</button>
+            </header>
+
+            <div id="chat-messages" class="messages-container">
+                <div class="system-message">End-to-End Encryption Enabled. Messages are not saved anywhere.</div>
+            </div>
+
+            <footer class="chat-input-area">
+                <div class="emoji-picker-container hidden" id="emoji-picker-container">
+                    <emoji-picker id="emoji-picker"></emoji-picker>
+                </div>
+                <form id="chat-form">
+                    <button type="button" id="btn-emoji" class="btn icon-btn" disabled>😀</button>
+                    <input type="text" id="input-message" placeholder="Type an encrypted message..." autocomplete="off" disabled>
+                    <button type="submit" id="btn-send" class="btn primary" disabled>Send</button>
+                </form>
+            </footer>
+        </div>
+    </div>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@1/index.js"></script>
+    <script src="/js/crypto_engine.js?v=8"></script>
+    <script src="/js/socket_client.js?v=8"></script>
+    <script src="/js/ui_manager.js?v=8"></script>
+</body>
+</html>
