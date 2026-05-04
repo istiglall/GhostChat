@@ -33,8 +33,8 @@ GhostChat is designed for simplicity and maximum privacy. No registration is req
 
 1.  **Set Your Identity:** Enter an optional **Nickname** to identify yourself in the chat. If left blank, you will appear as "Anonim".
 2.  **Create a Room:** Click on **"Create Secure Room"**. A unique, encrypted Room ID will be generated for you.
-3.  **Invite Friends:** Copy the generated Room ID and share it with your peer.
-4.  **Join a Room:** If you have an ID from a friend, paste it into the **"Enter Room ID"** field and click **"Join Room"**.
+3.  **Invite Others:** Copy the generated Room ID and share it with your friends. GhostChat supports **2 or more participants** in a single room.
+4.  **Join a Room:** Paste the Room ID into the **"Enter Room ID"** field and click **"Join Room"**.
 5.  **Chat Privately:** Once the secure channel is established (Keys are exchanged), you can send encrypted text and **Emojis** 😀 safely.
 
 > [!TIP]
